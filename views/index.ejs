@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <div class="container">
+    <ul class="collection with-header">
+      <% if (items.length > 0) { %>
+        <% items.forEach(item => { %>
+          <li class="collection-item">
+            <div>
+                <%= item.name %> $<%= item.price %>
+              <a href="#!" class="secondary-content">
+                <i class="material-icons">edit</i>
+                <i class="material-icons">delete</i>
+              </a>
+            </div>
+          </li>
+        <% }); %>
+      <% } else { %>
+        <li>There are n o items</li>
+      <% } %>
+    </ul>
+  </div>
+
+
+</body>
+</html>
